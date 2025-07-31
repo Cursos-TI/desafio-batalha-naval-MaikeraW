@@ -5,21 +5,36 @@ int main() {
     int index;
     char colunas [10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
     char linhas [10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int tabuleiro [10][10] = {
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0 ,3 ,3 ,3 ,0 ,0 ,0 ,0},
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,3},
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,3},
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,3},
+        {0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0}};
 
     for ( index = 0; index < 10; index++)
     {
         if (index == 0)
         {
-            printf("  %c ", colunas[index]);
+            printf("   %c ", colunas[index]);
         } else
             printf(" %c ", colunas[index]);
     }
     printf("\n");
     for (index = 0; index < 10; index++)
-    {
-        printf("%d\n", linhas[index]);
+    { 
+        if (index == 9)
+        {
+            printf("%d ", linhas[index]);printf("%d  %d  %d  %d  %d  %d  %d  %d  %d  %d\n", tabuleiro[index][0], tabuleiro[index][1], tabuleiro[index][2], tabuleiro[index][3], tabuleiro[index][4], tabuleiro[index][5], tabuleiro[index][6], tabuleiro[index][7], tabuleiro[index][8], tabuleiro[index][9]);
+            break;
+        } else
+            printf("%d  ", linhas[index]);printf("%d  %d  %d  %d  %d  %d  %d  %d  %d  %d\n", tabuleiro[index][0], tabuleiro[index][1], tabuleiro[index][2], tabuleiro[index][3], tabuleiro[index][4], tabuleiro[index][5], tabuleiro[index][6], tabuleiro[index][7], tabuleiro[index][8], tabuleiro[index][9]);
     }
-    
 
     return 0;
 }
