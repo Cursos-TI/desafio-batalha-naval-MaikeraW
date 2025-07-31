@@ -34,7 +34,8 @@ int main() {
             break;
         } else
             printf("%d  ", linhas[index]);printf("%d  %d  %d  %d  %d  %d  %d  %d  %d  %d\n", tabuleiro[index][0], tabuleiro[index][1], tabuleiro[index][2], tabuleiro[index][3], tabuleiro[index][4], tabuleiro[index][5], tabuleiro[index][6], tabuleiro[index][7], tabuleiro[index][8], tabuleiro[index][9]);
-    }
+            
+        }
 
     return 0;
 }
